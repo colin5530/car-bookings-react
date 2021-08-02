@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { VehicleDataProvider } from './context/VehicleData';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <VehicleDataProvider>
+      <App />
+    </VehicleDataProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
