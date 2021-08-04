@@ -1,20 +1,22 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import Legend from '../../components/Legend';
 import FilterBar from '../../components/FilterBar';
 import Sorting from '../../components/Sorting';
 import VehicleCard from '../../components/VehicleCard';
 import { useVehicleData } from '../../context/VehicleData';
 
-const Home = () => {
+const HomePage = () => {
   const vehicleData = useVehicleData();
+  const history = useHistory();
   
   const handleVehicleClick = (vehicle) => {
-    console.log('click!', vehicle);
+    history.push(`/profile/${vehicle.id}`);
   }
 
   const vehicleCards = vehicleData
     .map(vehicle => (
-        <VehicleCard vehicle={vehicle} key={vehicle.id} onClick={handleVehicleClick}/>
+      <VehicleCard vehicle={vehicle} key={vehicle.id} onClick={handleVehicleClick}/>
     ));
 
   return (
@@ -30,4 +32,4 @@ const Home = () => {
   );
 }
 
-export default Home;
+export default HomePage;

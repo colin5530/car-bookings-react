@@ -1,5 +1,11 @@
 import React from 'react';
-import Home from './pages/Home';
+import HomePage from './pages/HomePage';
+import ProfilePage from './pages/ProfilePage';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
 import './App.css';
 
 const App = () => {
@@ -8,7 +14,16 @@ const App = () => {
   return (
     <div className="App">
       <h1>Car Bookings</h1>
-      <Home />
+      <Router>
+        <Switch>
+          <Route path='/' exact>
+            <HomePage />
+          </Route>
+          <Route path='/profile/:id'>
+            <ProfilePage />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
