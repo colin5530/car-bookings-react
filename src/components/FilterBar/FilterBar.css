@@ -1,0 +1,7 @@
+.filter-bar-container {
+  display: inline-flex;
+}
+
+.filter-container {
+  margin: 10px;
+}
