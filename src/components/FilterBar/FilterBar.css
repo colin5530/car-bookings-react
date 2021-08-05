@@ -1,5 +1,6 @@
 .filter-bar-container {
   display: inline-flex;
+  flex-wrap: wrap;
 }
 
 .filter-container {

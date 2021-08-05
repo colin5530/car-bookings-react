@@ -93,3 +93,39 @@
 .vehicle-total-price-title {
   font-weight: 700;
 }
+
+@media only screen and (max-width: 600px) {
+  .vehicle-content-container {
+    display: block;
+  }
+
+  .vehicle-content {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .vehicle-details-container {
+    padding: 0;
+  }
+
+  .vehicle-details {
+    width: 100%;
+  }
+
+  .vehicle-vendor-details {
+    width: 100%;
+  }
+
+  .vehicle-attribute {
+    text-align: right;
+  }
+
+  .vehicle-attribute-title {
+    text-align: left;
+  }
+
+  .vehicle-availability-container {
+    display: block;
+    position: relative;
+  }
+}

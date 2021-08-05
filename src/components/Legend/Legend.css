@@ -8,6 +8,7 @@
   justify-content: space-evenly;
   width: 90%;
   margin: auto;
+  flex-wrap: wrap;
 }
 
 .legend-title {
